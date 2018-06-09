@@ -1,0 +1,29 @@
+@font-face {
+	font-family: Griffy;
+	font-style: normal;
+	font-weight: normal;
+	src:url("../Fonts/Griffy-Regular.ttf");
+}
+
+h1, h2, h3 {
+	font-family: "Griffy";
+}
+
+div#tail {
+	page-break-inside: avoid;
+	margin: 1em 0 1em 2em;
+  	font-style: italic;
+
+	div.smaller {
+		font-size: 93%;
+		margin-left: 0.5em;
+	}
+	p.tail1 {margin-left: 0.5em;}
+	p.tail2 {margin-left: 1em;}
+	p.tail3 {margin-left: 2em;}
+	p.tail4 {margin-left: 3em;}
+	p.tail5 {margin-left: 4em;}
+	p.tail6 {margin-left: 5em;}
+	p.tail7 {margin-left: 5.5em;}
+	p.tail8 {margin-left: 6em;}
+}

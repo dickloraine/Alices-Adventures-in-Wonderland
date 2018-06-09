@@ -1,0 +1,80 @@
+---
+# -----------------------------------------------------------------------------
+# Metadata
+# -----------------------------------------------------------------------------
+title: Alice's Adventures in Wonderland
+author: Lewis Carroll
+language: en-US
+
+# -----------------------------------------------------------------------------
+# Informations for building the book
+# -----------------------------------------------------------------------------
+kindlegen-path:
+output-formats: 
+  - epub
+  - pdf
+  - html
+  - kindle
+
+# -----------------------------------------------------------------------------
+# Universal Options
+# -----------------------------------------------------------------------------
+frontmatter:
+  - copyrights.md
+  - 00a_Prelude.md
+  - 00b_Greetings.md
+backmatter:
+number-sections: true
+exclude-files:
+  - README.md
+  - LICENSE.md
+
+# -----------------------------------------------------------------------------
+# Epub Options
+# -----------------------------------------------------------------------------
+cover-image: ./images/cover.jpg
+frontmatter-heading: Prelude
+epub-frontmatter:
+  - 00a_Prelude.md
+  - 00b_Greetings.md
+epub-backmatter:
+  - copyrights.md
+epub-extra-stylesheet: ./assets/styles/epub-stylesheet.scss
+epub-embed-font:
+  - ./assets/styles/Griffy-Regular.ttf
+
+# -----------------------------------------------------------------------------
+# PDF Options
+# -----------------------------------------------------------------------------
+paper: 6in:9in
+BCOR: 2mm
+center-headings: true
+fontsize: 10
+mainfont: EB Garamond
+sansfont: Griffy
+koma-options:
+  - name: headings
+    arguments: twolinechapter, big
+fontfamilies:
+  - name: tocfont
+    font: Questrial
+koma-fonts:
+  - element: chapterentry
+    fontfamily: tocfont
+
+# -----------------------------------------------------------------------------
+# HTML Options
+# -----------------------------------------------------------------------------
+html-extra-stylesheet: ./assets/styles/html_stylesheet.scss
+html-frontmatter:
+  - 00a_Prelude.md
+  - 00b_Greetings.md
+html-backmatter:
+  - copyrights.md
+
+# -----------------------------------------------------------------------------
+# Filters
+# -----------------------------------------------------------------------------
+pandoc-filter:
+  - ./assets/filter/tail_poem.py
+...
